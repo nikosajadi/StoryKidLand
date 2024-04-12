@@ -1,6 +1,6 @@
 <script setup>
-let fname = "Nasibeh";
-let lfamily = "Sajadi";
+// let fname = "Nasibeh";
+// let lfamily = "Sajadi";
 
 
 </script>
@@ -8,6 +8,6 @@ let lfamily = "Sajadi";
 <template>
   <div>
     <NuxtPage/>
-  <p @class="Header"> my name is {{ fname }}, {{ lfamily }}</p>
+  <!-- <p @class="Header"> my name is {{ fname }}, {{ lfamily }}</p> -->
   </div>
 </template>
