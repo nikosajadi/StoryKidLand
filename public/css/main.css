@@ -1,0 +1,4 @@
+/* To set the text direction from left to right */
+html,body {
+    direction: ltr;
+}
