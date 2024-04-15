@@ -1,27 +1,28 @@
 <script setup lang="ts">
+// Initialize router for navigation
 const router = useRouter();
+// Define hints as a reactive reference to an array of strings
 const hints = ref([
-  `        
-            <span>With</span>
-            <span class="FiraCode-SemiBold mx-3">the world of stories</span>
-            <span>, don't worry about new stories to tell</span>
-            `,
-  `            <span>With</span>
-            <span class="FiraCode-SemiBold mx-3">the world of stories</span>
-            <span >You can listen to the stories with the beautiful voice of other parents or you can read stories to others and share them yourself.</span>`,
+  `With <span class="FiraCode-SemiBold mx-3">the world of stories</span>, don't worry about new stories to tell`,
+  `With <span class="FiraCode-SemiBold mx-3">the world of stories</span>, you can listen to the stories with the beautiful voice of other parents or you can read stories to others and share them yourself.`,
 ]);
-
+// Define a reactive reference for the current step
 const step = ref(0);
+// Function to navigate to the next step or route
 const goToNext = () => {
+     // Check if the current step is not the last one, Increment the step
   if (step.value != 1) step.value++;
   else {
+      // Navigate to the "/intro" route
     router.push({ path: "/intro" });
   }
 };
 </script>
 
 <template>
+    <!-- Main container with dynamic classes and content -->
   <div class="pageBG w-screen h-screen flex flex-col items-start">
+     <!-- Header section with child components -->
     <div
       class="w-48 h-1/2 bg-white rounded-b-full flex justify-center self-center relative items-end"
     >
@@ -39,6 +40,7 @@ const goToNext = () => {
         />
       </div>
     </div>
+    <!-- Absolute positioned background image -->
     <div class="absolute bottom-0 w-screen z-1 self-center">
       <img
         src="/img/pattern.png"
@@ -46,12 +48,12 @@ const goToNext = () => {
         class="w-full h-full mix-blend-multiply rotate-180"
       />
     </div>
-
+   <!-- Dynamic content section with v-html directive -->
     <div
       v-html="hints[step]"
       class="FiraCode-Light text-white w-[400px] text-lg text-center self-center mt-20 z-50"
     ></div>
-
+   <!-- Button for navigation to next step -->   
     <div
       @click="goToNext"
       class="FiraCode-Medium text-green-500 w-screen text-center absolute bottom-5 right-0 z-50"
@@ -60,7 +62,7 @@ const goToNext = () => {
     </div>
   </div>
 </template>
-
+<!-- Scoped styles for the component -->
 <style>
 .pageBG {
   background-color: #2baf66;
