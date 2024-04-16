@@ -5,7 +5,7 @@ onMounted(async () => {
 // Execute router navigation after a delay
 setTimeout(() => {
   router.push({ path: "/starter" });
-}, 40000); // Wait for 2000 milliseconds (2 seconds) before navigating
+}, 2000); // Wait for 2000 milliseconds (2 seconds) before navigating
       
     });
 </script>
