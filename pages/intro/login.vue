@@ -1,26 +1,28 @@
 <script setup>
-// Initialize router for navigation
-const router = useRouter();
-const mobile = ref('');
-const error = ref('');
-const loading = ref(false);
+// Import the useRouter function from Vue Router
+import { useRouter } from 'vue-router';
+
+// Define reactive variables
+const mobile = ref(''); // Stores the user's mobile phone number
+const error = ref(''); // Stores error messages
+const loading = ref(false); // Indicates if a loading state is active
+
 // Function to navigate to the next step or route
-
 const goToNext = () => {
-  error.value = '';
-  if(mobile.value.toString().trim()===''){
-error.value = 'pls input your phon number'
-  }
-  else {
-    loading.value = true;
+  error.value = ''; // Reset error message
+  // Check if the mobile number is empty
+  if (mobile.value.toString().trim() === '') {
+    error.value = 'Please input your phone number'; // Set error message
+  } else {
+    loading.value = true; // Set loading state to true
    
+    // Simulate delay before navigating to the next route
     setTimeout(() => {
-        router.push({ path: "/intro/otp" });
-        loading.value = false;
+      router.push({ path: "/intro/otp" }); // Navigate to the OTP page
+      loading.value = false; // Set loading state to false
     }, 2000); // 2000 milliseconds = 2 seconds
+  }
 };
-};
-
 </script>
 
 <template>
