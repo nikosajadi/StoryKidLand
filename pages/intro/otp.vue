@@ -6,27 +6,36 @@ const router = useRouter();
 // Define reactive variables
 const mobile = ref(route.query.mobile); 
 const error = ref(''); // Stores error messages
-const loading = ref(false); // Indicates if a loading state is active
 
-console.log ('route :' , route)
+console.log ('route :' , route) // it just to test and see, what we get from previous page(login)
 // Function to navigate to the next step or route
+//we define an object 
+const otp = ref ({
+  num1:'',
+  num2:'',
+  num3:'',
+  num4:'',
+  num5:'',
+})
 const goToNext = () => {
   error.value = ''; // Reset error message
   // Check if the mobile number is empty
-  if (mobile.value.toString().trim() === '') {
-    error.value = 'Please input your phone number'; // Set error message
-    } else if (mobile.value.toString().trim().length !=11) {
-      error.value = 'Please input correct phone number'
-  } else {
-    loading.value = true; // Set loading state to true
-   
-    // Simulate delay before navigating to the next route
+  if (otp.value.num1.toString().trim() === '' ||
+  otp.value.num2.toString().trim() === '' ||
+  otp.value.num3.toString().trim() === '' ||
+  otp.value.num4.toString().trim() === '' ||
+  otp.value.num5.toString().trim() === '' ) {
+    error.value = 'Please input the code number'; // Set error message
+ } else { 
     setTimeout(() => {
-      router.push({ path: "/intro/otp" }); // Navigate to the OTP page
+      router.push({ path: "/intro/register" }); // Navigate to the OTP page
       loading.value = false; // Set loading state to false
     }, 2000); // 2000 milliseconds = 2 seconds
   }
 };
+const goToBack =() => {
+  router.push({ path: "/intro/login" }); // Navigate to the OTP page
+}
 </script>
 
 
@@ -57,33 +66,48 @@ const goToNext = () => {
           <spam>Enter the code sent</spam>
         </p>
         <p class="FiraCode-Regular text-sm mt-3">
-          <spam>Maximum waiting time to receive SMS:</spam>
+          <spam>waiting time to receive SMS:</spam>
           <spam class="FiraCode-Medium mx-3">02:30</spam>
         </p>
 
+     <div class=" grid grid-cols-5 gap-5 mt-2 mb-5 px-6">
+  <UInput
+  color="gray"
+  variant="outline"
+  size="xl"
+  v-model="otp.num1"/>
+  <UInput
+  color="gray"
+  variant="outline"
+  size="xl"
+  v-model="otp.num2"/>
+  <UInput
+  color="gray"
+  variant="outline"
+  size="xl"
+  v-model="otp.num3"/>
+  <UInput
+  color="gray"
+  variant="outline"
+  size="xl"
+  v-model="otp.num4"/>
+  <UInput
+  color="gray"
+  variant="outline"
+  size="xl"
+  v-model="otp.num5"/>
 
-        <!-- Input field -->
-        <!-- Bind loading (atribute) state to the input -->
-        <!-- if press entre key insted of press button go to next  -->
-        <UInput
-            class="mt-5 mb-5"
-            color="gray"
-            variant="outline"
-            size="xl"
-            :loading="loading" 
-            icon="i-heroicons-device-phone-mobile"
-            v-model="mobile"
-            @keyup.enter="goToNext"
-        />
+   </div>
+
 
         <!-- Error message -->
         <p class="text-red-500 text-xs FiraCode-Retina">{{error}}</p>
 
         <!-- Button -->
         <div class="bg-green-500 mt-5 my-5 py-3 px-10 w-full rounded-lg text-white Estedad_FD_Light" @click="goToNext">
-          <span>Send Code</span>
+          <span>Validation ID check</span>
         </div>
-        <div class="bg-gray-100 mt-2 py-3 px-10 w-full rounded-lg text-green-500 Estedad_FD_Light" @click="goToNext">
+        <div class="bg-gray-100 mt-2 py-3 px-10 w-full rounded-lg text-green-500 Estedad_FD_Light" @click="goToBack">
           <span>Change your phon number</span>
         </div>
 
