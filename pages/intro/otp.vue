@@ -1,13 +1,14 @@
 <script setup>
 
-
+const route = useRoute()
 // Initialize router for navigation
 const router = useRouter();
 // Define reactive variables
-const mobile = ref(''); // Stores the user's mobile phone number
+const mobile = ref(route.query.mobile); 
 const error = ref(''); // Stores error messages
 const loading = ref(false); // Indicates if a loading state is active
 
+console.log ('route :' , route)
 // Function to navigate to the next step or route
 const goToNext = () => {
   error.value = ''; // Reset error message
@@ -61,7 +62,7 @@ const goToNext = () => {
             v-model="mobile"
             @keyup.enter="goToNext"
         />
-
+{{ mobile }}
         <!-- Error message -->
         <p class="text-red-500 text-xs FiraCode-Retina">{{error}}</p>
 

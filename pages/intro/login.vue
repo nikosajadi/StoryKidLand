@@ -21,7 +21,9 @@ const goToNext = () => {
    
     // Simulate delay before navigating to the next route
     setTimeout(() => {
-      router.push({ path: "/intro/otp" }); // Navigate to the OTP page
+      router.push({ path: "/intro/otp", query:{ //send mobile
+        mobile :mobile.value
+      } }); // Navigate to the OTP page
       loading.value = false; // Set loading state to false
     }, 2000); // 2000 milliseconds = 2 seconds
   }

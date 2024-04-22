@@ -9,14 +9,15 @@ const hints = ref([
 // Define a reactive reference for the current step
 const step = ref(0);
 // Function to navigate to the next step or route
-const goToNext = () => {
+
      // Check if the current step is not the last one, Increment the step
+
+     const goToNext = () => {
   if (step.value != 1) step.value++;
-  else {
-      // Navigate to the "/intro" route
-    router.push({ path: "/intro" });
+  else{
+    router.push({ path: "/intro" })
   }
-};
+}
 </script>
 
 <template>
