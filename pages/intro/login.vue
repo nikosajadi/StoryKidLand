@@ -1,7 +1,8 @@
 <script setup>
-// Import the useRouter function from Vue Router
-import { useRouter } from 'vue-router';
 
+
+// Initialize router for navigation
+const router = useRouter();
 // Define reactive variables
 const mobile = ref(''); // Stores the user's mobile phone number
 const error = ref(''); // Stores error messages
@@ -13,6 +14,8 @@ const goToNext = () => {
   // Check if the mobile number is empty
   if (mobile.value.toString().trim() === '') {
     error.value = 'Please input your phone number'; // Set error message
+    } else if (mobile.value.toString().trim().length !=11) {
+      error.value = 'Please input correct phone number'
   } else {
     loading.value = true; // Set loading state to true
    
@@ -47,6 +50,7 @@ const goToNext = () => {
 
         <!-- Input field -->
         <!-- Bind loading (atribute) state to the input -->
+        <!-- if press entre key insted of press button go to next  -->
         <UInput
             class="mt-5 mb-5"
             color="gray"
