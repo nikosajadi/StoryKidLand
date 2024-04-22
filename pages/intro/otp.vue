@@ -1,42 +1,54 @@
 <script setup>
-
+// Retrieve current route information
 const route = useRoute()
+
 // Initialize router for navigation
 const router = useRouter();
+
 // Define reactive variables
-const mobile = ref(route.query.mobile); 
+const mobile = ref(route.query.mobile); // Mobile number from query params
 const error = ref(''); // Stores error messages
 
-console.log ('route :' , route) // it just to test and see, what we get from previous page(login)
-// Function to navigate to the next step or route
-//we define an object 
-const otp = ref ({
-  num1:'',
-  num2:'',
-  num3:'',
-  num4:'',
-  num5:'',
-})
+// Log current route for debugging purposes
+console.log('route :', route);
+
+// Initialize OTP object
+const otp = ref({
+  num1: '',
+  num2: '',
+  num3: '',
+  num4: '',
+  num5: '',
+});
+
+// Function to navigate to the next page
 const goToNext = () => {
   error.value = ''; // Reset error message
-  // Check if the mobile number is empty
-  if (otp.value.num1.toString().trim() === '' ||
-  otp.value.num2.toString().trim() === '' ||
-  otp.value.num3.toString().trim() === '' ||
-  otp.value.num4.toString().trim() === '' ||
-  otp.value.num5.toString().trim() === '' ) {
+
+  // Check if the mobile number is empty and add objects
+  if (
+    otp.value.num1.toString().trim() === '' ||
+    otp.value.num2.toString().trim() === '' ||
+    otp.value.num3.toString().trim() === '' ||
+    otp.value.num4.toString().trim() === '' ||
+    otp.value.num5.toString().trim() === ''
+  ) {
     error.value = 'Please input the code number'; // Set error message
- } else { 
+  } else {
+    // Navigate to the OTP page after a delay
     setTimeout(() => {
-      router.push({ path: "/intro/register" }); // Navigate to the OTP page
+      router.push({ path: "/intro/register" });
       loading.value = false; // Set loading state to false
     }, 2000); // 2000 milliseconds = 2 seconds
   }
 };
-const goToBack =() => {
-  router.push({ path: "/intro/login" }); // Navigate to the OTP page
+
+// Function to navigate back to the previous page
+const goToBack = () => {
+  router.push({ path: "/intro/login" }); // Navigate back to the login page
 }
 </script>
+
 
 
 <template>
@@ -70,40 +82,39 @@ const goToBack =() => {
           <spam class="FiraCode-Medium mx-3">02:30</spam>
         </p>
 
-     <div class=" grid grid-cols-5 gap-5 mt-2 mb-5 px-6">
-  <UInput
-  color="gray"
-  variant="outline"
-  size="xl"
-  v-model="otp.num1"/>
-  <UInput
-  color="gray"
-  variant="outline"
-  size="xl"
-  v-model="otp.num2"/>
-  <UInput
-  color="gray"
-  variant="outline"
-  size="xl"
-  v-model="otp.num3"/>
-  <UInput
-  color="gray"
-  variant="outline"
-  size="xl"
-  v-model="otp.num4"/>
-  <UInput
-  color="gray"
-  variant="outline"
-  size="xl"
-  v-model="otp.num5"/>
-
-   </div>
-
+        <!-- OTP input fields -->
+        <div class="grid grid-cols-5 gap-5 mt-2 mb-5 px-6">
+          <UInput
+            color="gray"
+            variant="outline"
+            size="xl"
+            v-model="otp.num1"/>
+          <UInput
+            color="gray"
+            variant="outline"
+            size="xl"
+            v-model="otp.num2"/>
+          <UInput
+            color="gray"
+            variant="outline"
+            size="xl"
+            v-model="otp.num3"/>
+          <UInput
+            color="gray"
+            variant="outline"
+            size="xl"
+            v-model="otp.num4"/>
+          <UInput
+            color="gray"
+            variant="outline"
+            size="xl"
+            v-model="otp.num5"/>
+        </div>
 
         <!-- Error message -->
         <p class="text-red-500 text-xs FiraCode-Retina">{{error}}</p>
 
-        <!-- Button -->
+        <!-- Buttons -->
         <div class="bg-green-500 mt-5 my-5 py-3 px-10 w-full rounded-lg text-white Estedad_FD_Light" @click="goToNext">
           <span>Validation ID check</span>
         </div>
@@ -135,5 +146,6 @@ const goToBack =() => {
     </div>
   </div>
 </template>
+
 
 <style></style>
