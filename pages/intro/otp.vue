@@ -38,8 +38,7 @@ const goToNext = () => {
     // Navigate to the OTP page after a delay
     setTimeout(() => {
       router.push({ path: "/intro/register" });
-      loading.value = false; // Set loading state to false
-    }, 2000); // 2000 milliseconds = 2 seconds
+    }, 200); // 2000 milliseconds = 2 seconds
   }
 };
 
