@@ -39,7 +39,7 @@ const goToNext = () => {
         <!-- Title -->
         <p class="FiraCode-SemiBold text-lg">Login</p>
         <!-- Subtitle -->
-        <p class="FiraCode-Regular text-xs mt-2">Get phone number</p>
+        <p class="FiraCode-Regular text-xs mt-2">Mobile number validation</p>
       </div>
     </div>
 
@@ -47,7 +47,20 @@ const goToNext = () => {
     <div class="h-screen w-full flex flex-col justify-center items-center">
       <div class="w-full text-center mt-12 px-5">
         <!-- Instruction -->
-        <p class="FiraCode-Regular text-xs">Enter your phone number</p>
+        <p class="FiraCode-Regular text-sm mt-3">
+          <spam>You will enter with mobile number</spam>
+          <spam class="FiraCode-Medium mx-3">{{mobile}}</spam>
+          <spam> mobile number</spam>
+          </p>
+
+        <p  class="FiraCode-Regular text-sm mt-3">
+          <spam>Enter the code sent</spam>
+        </p>
+        <p class="FiraCode-Regular text-sm mt-3">
+          <spam>Maximum waiting time to receive SMS:</spam>
+          <spam class="FiraCode-Medium mx-3">02:30</spam>
+        </p>
+
 
         <!-- Input field -->
         <!-- Bind loading (atribute) state to the input -->
@@ -62,17 +75,18 @@ const goToNext = () => {
             v-model="mobile"
             @keyup.enter="goToNext"
         />
-{{ mobile }}
+
         <!-- Error message -->
         <p class="text-red-500 text-xs FiraCode-Retina">{{error}}</p>
 
         <!-- Button -->
-        <div class="bg-green-500 my-5 py-3 px-10 w-full rounded-lg text-white Estedad_FD_Light" @click="goToNext">
+        <div class="bg-green-500 mt-5 my-5 py-3 px-10 w-full rounded-lg text-white Estedad_FD_Light" @click="goToNext">
           <span>Send Code</span>
         </div>
+        <div class="bg-gray-100 mt-2 py-3 px-10 w-full rounded-lg text-green-500 Estedad_FD_Light" @click="goToNext">
+          <span>Change your phon number</span>
+        </div>
 
-        <!-- Link to privacy policy -->
-        <nuxt-link to="/intro/privacy" class="FiraCode-Medium text-sm">Policy and Conditions</nuxt-link>
       </div>
     </div>
 
