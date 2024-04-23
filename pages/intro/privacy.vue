@@ -2,7 +2,7 @@
 
 const router = useRouter();
 
-const goToNext = () => {
+const goToBack = () => {
     router.back()};
     
 </script>
@@ -24,7 +24,7 @@ const goToNext = () => {
     <!-- Content section -->
     <div class="h-screen w-full flex flex-col justify-center items-center">
       <div class="w-full text-center px-5">
-     <p class="FiraCode-Regular text-xs justify-center leading-10 text-left">
+     <p class="FiraCode-Regular text-xs justify-center leading-8 text-left">
         <spam class="FiraCode-SemiBold">The Story World </spam>
    <spam>The Story World application has been created for the collection and dissemination of children's stories and tales from around the world in the virtual space, in Persian language.
 
@@ -35,7 +35,7 @@ const goToNext = () => {
      </p>
         
         <!-- Button -->
-        <div class="bg-green-500 my-5 py-3 px-10 w-full rounded-lg text-white Estedad_FD_Light" @click="goToNext">
+        <div class="bg-green-500 my-5 py-3 px-10 w-full rounded-lg text-white Estedad_FD_Light" @click="goToBack">
           <span>I accept the terms and conditions</span>
         </div>
 

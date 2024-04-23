@@ -18,17 +18,13 @@ const goToNext = () => {
     } else if (lastName.value.toString().trim()=== '') {
       error.value = 'Please input LastName'
   } else {
-    loading.value = true; // Set loading state to true
-   
-    // Simulate delay before navigating to the next route
-    setTimeout(() => {
-    // //   router.push({ path: "/intro/otp", query:{ 
-       
-    //   } }); // Navigate to the OTP page
-      loading.value = false; // Set loading state to false
-    }, 200); // 2000 milliseconds = 2 seconds
+    loading.value = true;
+    setTimeout(()=>{
+      loading.value = false;
+      router.push({ path: "/home" })
+    },2000)
   }
-};
+}
 </script>
 
 

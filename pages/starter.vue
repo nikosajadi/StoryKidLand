@@ -12,7 +12,9 @@ const step = ref(0);
 
      // Check if the current step is not the last one, Increment the step
 
-     const goToNext = () => {
+
+
+const goToNext = () => {
   if (step.value != 1) step.value++;
   else{
     router.push({ path: "/intro" })

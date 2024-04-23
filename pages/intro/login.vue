@@ -21,13 +21,15 @@ const goToNext = () => {
    
     // Simulate delay before navigating to the next route
     setTimeout(() => {
+      loading.value = false;// Set loading state to false
       router.push({ path: "/intro/otp", query:{ //send mobile
         mobile :mobile.value
-      } }); // Navigate to the OTP page
-      loading.value = false; // Set loading state to false
-    }); 
+      } }) // Navigate to the OTP page
+    
+    },2000)
   }
-};
+}
+
 </script>
 
 

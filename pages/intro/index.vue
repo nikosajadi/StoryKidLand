@@ -1,14 +1,8 @@
-<script setup>
-// Initialize router for navigation
-const router = useRouter();
-
-
-// Function to navigate to the next step or route
+<script setup lang="ts">
+const router = useRouter()
 const goToNext = () => {
-  // Navigate to the "/intro" route
-    router.push({ path: "/intro/login" });
-  }
-
+  router.push({ path: "/intro/login" })
+}
 </script>
 
 <template>
@@ -38,7 +32,7 @@ const goToNext = () => {
     <!-- Button for navigation to next step -->   
     <div @click="goToNext" class="FiraCode-Medium flex justify-center text-white w-screen text-center absolute bottom-10 z-50">
       <div class="bg-green-500 text-white px-10 py-3 mx-5 rounded-lg w-full  text-center tracking-tight">
-        <span>Sign In the world of the story</span>
+        <span>Sign In the story world</span>
       </div>
     </div>
   </div>
