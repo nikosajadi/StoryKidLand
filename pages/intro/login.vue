@@ -25,7 +25,7 @@ const goToNext = () => {
         mobile :mobile.value
       } }); // Navigate to the OTP page
       loading.value = false; // Set loading state to false
-    }, 200); // 2000 milliseconds = 2 seconds
+    }); 
   }
 };
 </script>
