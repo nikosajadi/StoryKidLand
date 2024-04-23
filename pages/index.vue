@@ -14,7 +14,7 @@ setTimeout(() => {
     <div class=" pageBG w-screen h-screen flex flex-col items-start">
         <div class="h-screen w-full flex flex-col mb-10 justify-center items-center " >
             <img src="/img/logo.png" alt="logo" class="w-32" >
-            <p class="FiraCode-SemiBold text-2xl text-white pt-10">The world of Story</p>
+            <p class="FiraCode-SemiBold text-2xl text-white pt-10">The Story World</p>
         </div>
 
 <div class="text-white absolute w-screen bottom-5 text-center  ">

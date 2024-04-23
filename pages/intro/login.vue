@@ -83,11 +83,11 @@ const goToNext = () => {
         <!-- Logo -->
         <img src="/img/logo-green.png" alt="logo" class="w-16" />
         <!-- Subtitle -->
-        <p class="text-green-500 text-xs mt-2">The world of stories</p>
+        <p class="text-green-500 text-xs mt-2">The Story World </p>
       </div>
       <div class="flex flex-col items-center justify-center text-black mr-4">
         <!-- Additional info -->
-        <p class="text-xs">The world of stories</p>
+        <p class="text-xs">The Story World </p>
         <p class="text-xs mt-2">Version: 1.0.2</p>
       </div>
     </div>
