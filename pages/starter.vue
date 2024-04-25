@@ -23,7 +23,7 @@ const goToNext = () => {
 </script>
 
 <template>
-    <!-- Main container with dynamic classes and content -->
+
   <div class="pageBG w-screen h-screen flex flex-col items-start">
      <!-- Header section with child components -->
     <div

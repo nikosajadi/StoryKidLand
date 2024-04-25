@@ -51,7 +51,7 @@ const goToBack = () => {
 
 
 <template>
-  <!-- Main container -->
+  
   <div class="w-screen h-screen flex flex-col items-start">
     <!-- Header section -->
     <div class="text-white w-screen flex flex-row justify-center text-center absolute top-8 z-50">

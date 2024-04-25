@@ -14,8 +14,9 @@
 </div>
 </template>
 
-<!--To start adding transition between my pages  -->
+
 <style>
+
 .page-enter-active,
 .page-leave-active {
   transition: all 0.4s;

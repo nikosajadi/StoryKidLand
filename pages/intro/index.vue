@@ -6,6 +6,7 @@ const goToNext = () => {
 </script>
 
 <template>
+  <div>
   <div class="w-screen h-screen flex flex-col items-start">
   <div class="h-screen w-full flex flex-col mb-10 justify-center items-center " >
 <img src="/img/logo-green.png" alt="logo" class="w-32" >
@@ -28,6 +29,7 @@ const goToNext = () => {
         class="w-full h-full mix-blend-multiply"
       />
     </div>
+  </div>
    
     <!-- Button for navigation to next step -->   
     <div @click="goToNext" class="FiraCode-Medium flex justify-center text-white w-screen text-center absolute bottom-10 z-50">

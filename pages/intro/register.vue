@@ -21,7 +21,7 @@ const goToNext = () => {
     loading.value = true;
     setTimeout(()=>{
       loading.value = false;
-      router.push({ path: "/home" })
+      router.push({ path: "/intro/home" })
     },2000)
   }
 }
