@@ -1,10 +1,11 @@
 <script setup>
-export default {
-    
-}
+
 </script>
 <template>
-    
+    <div>
+        <slot />
+        
+    </div>
 </template>
 <style scoped>
 

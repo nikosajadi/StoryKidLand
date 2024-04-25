@@ -7,9 +7,11 @@
 
 <template>
   <div>
-    <NuxtPage/>
-  <!-- <p @class="Header"> my name is {{ fname }}, {{ lfamily }}</p> -->
-  </div>
+    
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
+</div>
 </template>
 
 <!--To start adding transition between my pages  -->

@@ -6,6 +6,6 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' }
   },
     css : ["~/public/css/font.css" ,"~/public/css/main.css"],
-   modules: ['@nuxt/ui']
+   modules: ['@nuxt/ui','nuxt-icons']
 })
  

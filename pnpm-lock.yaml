@@ -11,6 +11,9 @@ dependencies:
   nuxt:
     specifier: ^3.11.1
     version: 3.11.2(@unocss/reset@0.58.9)(floating-vue@5.2.2)(unocss@0.58.9)(vite@5.2.8)
+  nuxt-icons:
+    specifier: ^3.2.1
+    version: 3.2.1
   vue:
     specifier: ^3.4.21
     version: 3.4.21
@@ -5319,6 +5322,15 @@ packages:
       - supports-color
       - vite
       - vue
+    dev: false
+
+  /nuxt-icons@3.2.1:
+    resolution: {integrity: sha512-trvAFq9oWYwWEQ0qZDHVxvLK+TwOdFnoXYOXQvN1CRUlp1DBJdxC8vXO3mED2Kb+Suag+bpWLC6eXGrRwhfffQ==}
+    dependencies:
+      '@nuxt/kit': 3.11.2
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
     dev: false
 
   /nuxt@3.11.2(@unocss/reset@0.58.9)(floating-vue@5.2.2)(unocss@0.58.9)(vite@5.2.8):
