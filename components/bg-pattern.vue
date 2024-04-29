@@ -1,10 +1,10 @@
-<script setup lang="ts">
-definePageMeta({ layout: 'main'})
+<script>
+
 </script>
 <template>
     <div>
           <!-- Absolute positioned background image -->
-    <div class="absolute w-screen top-0 z-1 self-center">
+    <div class="absolute w-screen top-0 z-1 self-center opacity-60">
         <img
           src="/img/pattern.png"
           alt="pattern"

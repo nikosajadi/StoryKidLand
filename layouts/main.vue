@@ -5,7 +5,9 @@
 <template>
      <div>
          <slot />
+         <Bg-pattern />
         <Navbar />
+
 
  
      </div>
