@@ -5,9 +5,9 @@
 </script>
 <template>
     <div class="flex flex-col w-screen h-auto py-5">
-        <p class="pr-5">Daily</p>
+        <p class="pl-5">Daily</p>
 
-        <div class="flex flex-row">
+        <div class="flex flex-row pt-2">
             <HomeDailyItem/>
             <HomeDailyItem/>
             <HomeDailyItem/>

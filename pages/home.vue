@@ -7,7 +7,7 @@ definePageMeta({ layout: 'main'})
     <div class="flex flex-col w-screen h-auto overflow-x-hidden">
       <BgPattern/>
       <HomeHeader/>
-      <!-- <HomeDaily/> -->
+      <HomeDaily/>
       <HomeVitrin/>
     </div>
   </template>
