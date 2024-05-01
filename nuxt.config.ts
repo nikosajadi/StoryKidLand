@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: false } ,
   //  enable layout transitions to apply an automatic transition for all my layouts
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' }
+    pageTransition: { name: 'page', mode: 'out-in' },
   },
   plugins:[{src:'~/plugins/bootstrap',mode:'client'}],
     css : ["~/public/css/font.css" ,"~/public/css/main.css"],
