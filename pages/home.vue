@@ -9,6 +9,7 @@ definePageMeta({ layout: 'main'})
       <HomeHeader/>
       <HomeDaily/>
       <HomeVitrin/>
+      
     </div>
   </template>
   
