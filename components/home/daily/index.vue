@@ -9,6 +9,15 @@
   modifier:1,
   slideShadows: true,
  })
+
+ const dailes = ref([
+  {img:"/img/books/676-cover-for-site.jpg",name:'Liam'},
+  {img:"/img/books/679-cover-for-site.jpg",name:'Lavla'},
+  {img:"/img/books/880 -cover-for-site.jpg",name:'Hans'},
+  {img:"/img/books/659-cover-for-site.jpg",name:'Sam'},
+ 
+ ])
+
 </script>
 
 <template>
