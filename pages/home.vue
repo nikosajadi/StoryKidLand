@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BgPattern from "~/components/home/bg-pattern.vue";
+// import BgPattern from "~/components/home/bg-pattern.vue";
 definePageMeta({ layout: 'main'})
 </script>
 
@@ -9,7 +9,7 @@ definePageMeta({ layout: 'main'})
       <HomeHeader/>
       <HomeDaily/>
       <HomeVitrin/>
-      
+
     </div>
   </template>
   

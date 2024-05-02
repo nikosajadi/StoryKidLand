@@ -10,14 +10,14 @@ const coverflowEffect = ref({
 })
 
  const dailes = ref([
-  {img:"https://avatar.iran.liara.run/public",name:'Liam'},
-  {img:"https://avatar.iran.liara.run/public",name:'Lavla'},
-  {img:"https://avatar.iran.liara.run/public",name:'Hans'},
-  {img:"https://avatar.iran.liara.run/public",name:'Sam'},
-  {img:"https://avatar.iran.liara.run/public",name:'Liam'},
-  {img:"https://avatar.iran.liara.run/public",name:'Lavla'},
-  {img:"https://avatar.iran.liara.run/public",name:'Hans'},
-  {img:"https://avatar.iran.liara.run/public",name:'Sam'},
+  {img:"https://api.dicebear.com/8.x/personas/svg?seed=Whiskers",name:'Liam'},
+  {img:"https://api.dicebear.com/8.x/avataaars/svg?seed=Garfield",name:'Lavla'},
+  {img:"https://api.dicebear.com/8.x/big-ears/svg?seed=Luna",name:'Hans'},
+  {img:"https://api.dicebear.com/8.x/big-ears/svg?seed=Bailey",name:'Sam'},
+  {img:"https://api.dicebear.com/8.x/micah/svg?seed=Mimi",name:'Liam'},
+  {img:"https://api.dicebear.com/8.x/croodles/svg?seed=Chloe",name:'Lavla'},
+  {img:"https://api.dicebear.com/8.x/big-ears/svg?seed=Lola",name:'Hans'},
+  {img:"https://api.dicebear.com/8.x/lorelei/svg?seed=Salem",name:'Sam'},
  
  ])
 
