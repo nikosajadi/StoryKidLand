@@ -24,7 +24,7 @@ const coverflowEffect = ref({
 </script>
 
 <template>
-    <div class="flex flex-col w-screen h-auto py-5">
+    <div class="flex flex-col w-screen h-auto py-2">
         <p class="pl-5">Dailies</p>
         <div class="flex flex-row my-5" v-if="dailes.length > 0">
           <swiper
