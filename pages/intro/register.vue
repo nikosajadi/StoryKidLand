@@ -4,15 +4,15 @@
 // Initialize router for navigation
 const router = useRouter();
 // Define reactive variables
-const firstName = ref(''); // Stores the user's mobile phone number
-const lastName = ref(''); // Stores the user's mobile phone number
+const firstName = ref(''); // Stores the user's firstName
+const lastName = ref(''); // Stores the user's lasName
 const error = ref(''); // Stores error messages
 const loading = ref(false); // Indicates if a loading state is active
 
 // Function to navigate to the next step or route
 const goToNext = () => {
   error.value = ''; // Reset error message
-  // Check if the mobile number is empty
+  // Check if the firstName is empty
   if (firstName.value.toString().trim() === '') {
     error.value = 'Please input FirstName'; // Set error message
     } else if (lastName.value.toString().trim()=== '') {
