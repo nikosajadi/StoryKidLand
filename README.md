@@ -1,3 +1,8 @@
+## Project Objective
+
+The goal of this project is to create an interactive web application focused on storytelling or books. The application allows users to browse, view, and interact with a library of stories or books. Built using Vue.js for the front-end, the project includes a visually engaging user interface with server-side logic to manage content and API requests.
+
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
