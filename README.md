@@ -1,6 +1,23 @@
-## Project Objective
+# StoryKidLand
 
-The goal of this project is to create an interactive web application focused on storytelling or books. The application allows users to browse, view, and interact with a library of stories or books. Built using Vue.js for the front-end, the project includes a visually engaging user interface with server-side logic to manage content and API requests.
+**StoryKidLand** is a fun and interactive application aimed at children, offering them a platform to explore various stories through an engaging and intuitive interface.
+
+## Features
+- Explore a variety of stories for children.
+- Interactive and easy-to-use interface.
+- Mobile-friendly design.
+- Categories for different types of stories (e.g., fairy tales, educational, etc.).
+
+## Technology Stack
+- **Nuxt.js**: A powerful framework for building server-side rendered Vue.js applications.
+- **TypeScript**: Provides static typing to ensure better code quality.
+- **Tailwind CSS**: For responsive and modern styling.
+
+## Installation and Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/nikosajadi/StoryKidLand.git
 
 
 # Nuxt 3 Minimal Starter
@@ -29,52 +46,6 @@ bun install
 
 Start the development server on `http://localhost:3000`:
 
-```bash
-# npm
-npm run dev
 
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
